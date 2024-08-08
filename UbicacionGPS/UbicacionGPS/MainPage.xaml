@@ -1,0 +1,56 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UbicacionGPS.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Ubicación GPS Seccion-0742"  
+                   HorizontalTextAlignment="Center" 
+                   TextColor="White" 
+                   FontSize="36" />
+        </Frame>
+
+        <Image Source="https://cdn.icon-icons.com/icons2/452/PNG/256/Google_Maps_43550.png"  
+               Aspect="Fill"
+               HeightRequest="{OnPlatform Android=200}"  
+               WidthRequest="{OnPlatform Android=350}"  
+               HorizontalOptions="Center" />
+
+        <Entry Text="Nombre Ubicacion" 
+               Keyboard="Text" 
+               x:Name="txtNombreUbicacion" />
+
+        <Label Text="Latitud" 
+               Margin="0,24,0,0" 
+               Padding="10" 
+               FontSize="25" />
+
+        <Entry Text="" 
+               Keyboard="Numeric" 
+               x:Name="txtLatitud" 
+               BackgroundColor="Azure" />
+
+        <Label Text="Longitud" 
+               Margin="0,24,0,0" 
+               Padding="10" 
+               FontSize="25" />
+
+        <Entry Text="" 
+               Keyboard="Numeric" 
+               x:Name="txtLongitud" />
+
+        <Button Text="Abrir Ubicacion" 
+                x:Name="btnAbrir" 
+                Clicked="btnAbrir_Clicked"
+                FontSize="20" 
+                BackgroundColor="#18dcff" 
+                BorderWidth="5" 
+                BorderColor="YellowGreen"
+                CornerRadius="25"
+                WidthRequest="150"
+                HeightRequest="50"
+                TextColor="#1e3799"
+                Opacity="0.5" />
+    </StackLayout>
+
+</ContentPage>
